@@ -1,0 +1,19 @@
+
+Linux: 
+    Linux is the Kernel of a family of open source Unix like OS.
+OS: 
+    A system software that manages computer hardware and provides various services for computer programs.
+Unix: 
+    A powerful, multitasking, multi-user OS that serves as the basis for many modern OS
+Kernel: 
+    The kernel is the core part of an OS. It is responsible for managing the hardware, including the CPU, memory, and other devices
+
+There are various OS built upon GNU/Linux, called Linux distributions (distros)
+Some popular distributions are Ubuntu (part of Debian family) and CentOS (part of Red Hat family)
+
+
+Virtual Box:
+    VirtualBox is a free and open source virtualization software that allows you to create and run virtual machines (VMs) on your computer. Developed by Oracle Corporation.
+
+
+
