@@ -68,9 +68,14 @@ rmdir <folder>   # Delete an Empty directory
 # Instead of searching by name, we can use the find program for a more sophisticated search
 find <path> -type f     # If we want to see only file types
 find <path> -type d     # If we want to see only directories types
+find <path> -type f -name "file.txt"    # If we want to see only file, and file name is file.txt
+find <path> -type f -name "file.txt" -maxdepth 1   # If we want to see only file types, file name is file.txt and we want to look in the current directory, not any sub directories.
 find <path> -type f -mtime 7     # If we want to see only file types that are modified within the last 7 days
+find <path> -type f -mtime +7     # If we want to see only file types that are modified before the last 7 days
 find <path> -type f -size +10M   # If we want to see only file types that are larger than 10 MB
+find . -empty   # Find all the empty files
 find <path> -empty -delete       # Delete all empty files
+find . -perm 777   # Find all the files that have 777 permissions
 
 
 ## FILE MANAGEMENT PART 2 (TEXT FILES)
@@ -211,7 +216,7 @@ which <programname>    # To find a program, e.g. which sed   --> /usr/bin/sed
 
 
 # alias: We can use an alias to shorten our command
-# An alias is only valid within the current session. We can add it to a startup file, so it is loaded every time we start our shell
+# An alias is only valid within the current session. We can add it to a startup file, so it is loaded every time we start our shell.
 alias gohome='cd ~'
 alias                    # To list existing aliases
 unalias gohome           # To remove an alias
@@ -223,9 +228,25 @@ whois <domain>
 ifplugstatus       # Shows if your interfaces are working or not
 
 
+whoami         # Shows the current user's username
 
 
+## Perform operations on multiple files simultaneously
+find . -type f -name "*.txt" - exec rm -rf {} +       # Perform an operation on multiple files
 
 
+## grep
+grep         # global regular expression print. It allows us to search for content within the file/output. It is case sensitive.
+grep "somevalue" file.txt 
+grep -w "someword" file.txt
+grep -i "caseinsensitvevalue" file.txt
+grep -n "value" file.txt        # Find line number for the value
+grep -B 3 "value" file.txt      # Finds the value in the file and shows 3 lines that come before the value as well
+grep -rwin "value" directory    # Find the value inside the directory recursively
+grep -wirl "value" directory    # Shows files containing the value in the directory
+grep -wirc "value" directory    # Shows the files and count of how many times value appear in each file
+
+
+## regex (Regular Expressions)
 
 
