@@ -248,5 +248,60 @@ grep -wirc "value" directory    # Shows the files and count of how many times va
 
 
 ## regex (Regular Expressions)
+grep -P "\w" names.txt    # Find all the  words in file
+grep -P "\d{3}-\d{3}-\d{3}-\d{1}" names.txt     # Find the contact number using the pattern
+
+
+
+
+## Terminal Shortcuts
+# Ctrl+A --> Move cursor to the start of command    and     # Ctrl+E --> Move cursor to the end of command
+# Ctrl+K --> Remove everything after the cursor on same line
+# Tab --> To autocomplete the command
+# !<command_number>    -->  Run a command from history by sepcifying its index   and You can also use with command like !find. This will run the previous find command
+# Ctrl + R   --> To search for commands from history by specifying keywords used in the command
+# Ctrl + L   --> To clear the terminal
+
+
+
+
+wget <url>     # Download files from internet
+wget -o myfile.pdf <pdf_url>      # Download PDF and give name myfile
+
+
+
+top    # See all the processes running
+kill <process id>   # You can kill a process using kill command
+
+
+
+uname      # To check the Kernel
+uname -o   # To check the Kernel type
+uname -r   # To check the Kernel version 
+uname -m   # To check the architecture type
+cat /etc/os-release/   # Get all the information about the OS
+lscpu      # To check all the CPU details
+hostname   # To check the hostname of the OS
+hostname -i    # To check the IP 
+
+free       # To check the memory
+free -h    # To check the memory in human readable format
+vmstat     # To check the vritual memory
+vmstat -S m  # To display in MBs
+id         # To view the id of the current user
+id <username>  # To view the id of a specific user
+
+zip <zip_name> <source_file>   # Create a zip file with name and zip the source file
+
+
+
+useradd <username>   # Create a new user
+passwd <username>    # Set a password for that user
+userdel <username>   # Delete the user
+getent group <username> # Check if user exists or not
+
+
+lsof   # List all the open files by either any process, or user
+lsof -u <username>   # List all the open files by user
 
 
